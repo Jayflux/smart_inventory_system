@@ -6,7 +6,9 @@ require('./config/passport');
 
 const authRoutes = require('./routes/authRoutes');
 const itemRoutes = require('./routes/itemRoutes');
+const rateLimiter = require('./middleware/rateLimiter');
 
+app.use(rateLimiter); // Gunakan rate limiter untuk semua rute
 app.use(express.json());
 app.use(passport.initialize());
 
