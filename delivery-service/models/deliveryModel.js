@@ -1,4 +1,4 @@
-const db = require('../../database/db');
+const db = require('../db');
 
 const getAllDeliveries = () => db.query('SELECT * FROM deliveries');
 const getDeliveryById = (id) => db.query('SELECT * FROM deliveries WHERE id = ?', [id]);

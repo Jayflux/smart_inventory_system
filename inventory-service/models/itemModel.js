@@ -1,4 +1,4 @@
-const db = require('../../database/db');
+const db = require('../db');
 
 const getAllItems = () => db.query('SELECT * FROM items');
 const getItemById = (id) => db.query('SELECT * FROM items WHERE id = ?', [id]);

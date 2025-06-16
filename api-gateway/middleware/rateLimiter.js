@@ -1,11 +1,9 @@
 const rateLimit = require('express-rate-limit');
 
 const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 menit
-    max: 100, // maksimal 100 permintaan per window
+    windowMs: 60 * 1000, // 1 menit
+    max: 5, 
     message: 'Terlalu banyak permintaan dari IP ini, coba lagi nanti.',
-    standardHeaders: true,
-    legacyHeaders: false,
 });
 
 module.exports = limiter;

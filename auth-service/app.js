@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const passport = require('passport');
 const app = express();
+const db = require('./db');
 
 // konfigurasi strategi Passport (JWT + Google)
 require('./config/passport');
